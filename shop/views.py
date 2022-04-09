@@ -6,3 +6,4 @@ from django.urls import translate_url
 
 class IndexView(TemplateView):
     template_name = 'index.html'
+
