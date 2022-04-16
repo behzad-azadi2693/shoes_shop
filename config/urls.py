@@ -27,6 +27,11 @@ urlpatterns = [
     path('', include('shop.urls')),
 ]
 
+handler404 = 'shop.views.error_404'
+handler500 = 'shop.views.error_500'
+handler403 = 'shop.views.error_403'
+handler400 = 'shop.views.error_400'
+
 if settings.DEBUG:
     urlpatterns +=  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns +=  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
