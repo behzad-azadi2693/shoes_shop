@@ -6,7 +6,7 @@ services:
     container_name: ${DB_NAME}
     restart: on-failure
     environment:
-      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_DB=${DB_HOST}
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     ports: 
